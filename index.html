@@ -215,9 +215,13 @@ display: none;
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const Research Article Count = displayWordCount("Research Article"); 
+    const IntroductionCount = displayWordCount("Introduction"); 
+    const CollapseCount = displayWordCount("Collapse of the first Sunshine Skyway");
+    const EngineeringCount = displayWordCount("Engineering an improved Sunshine Skyway"); 
+    const WorkCount = displayWordCount("Did it work?");
+    const ConclusionCount = displayWordCount("Conclusion"); 
     // Calculate the sum of all selected sections
-    const totalWordCount = Research Article Count; 
+    const totalWordCount = IntroductionCount + CollapseCount + EngineeringCount + WorkCount + ConclusionCount; 
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
